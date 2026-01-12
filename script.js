@@ -235,7 +235,7 @@ btn.addEventListener("click", async (e) => {
 
 });
 // ===== 開発用：時間帯を強制 =====
-const FORCE_SLOT = "deepnight"; // "night" / "deepnight" / null最後に消す！！
+const FORCE_SLOT = null; // "night" / "deepnight" / null最後に消す！！
 
 function getTimeSlotJST() {
   if (FORCE_SLOT) return FORCE_SLOT;  //最後に消す！！
