@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>心のメッセージ</title>
+  <link rel="stylesheet" href="style.css?v=101">
+</head>
+
+<body class="morning">
+  
+  <div class="emotion-layer"></div>
+
+  <h1> 内なるメッセージ </h1>
+
+  <div class="container">
+    <p id="guide"></p>
+
+    <button id="btn" class="open-btn">
+       今のこころをひらく
+    </button>
+    <p id="result"></p>
+
+ <!-- deepnight video area -->
+<div id="deepnightArea" style="display:none;">
+  <video
+    id="deepnightVideo"
+    playsinline
+    muted
+    loop
+    preload="metadata"
+    style="width:100%; border-radius:16px;"
+  ></video>
+
+  <div class="deepnight-controls">
+    <button id="deepnightPlayBtn" type="button" class="sub-btn">
+      ⏸ 停止
+    </button>
+
+    <button id="deepnightSoundBtn" type="button" class="sub-btn">
+      🔈 音をON
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+  <!-- ★ここまで追加 -->
+<script type="module" src="script.js?v=200" ></script>
+
+  <!-- <script src="script.js?v=200" defer></script> -->
+</body>
+</html>
