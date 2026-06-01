@@ -146,7 +146,7 @@ body.deepnight .container {
    Title / Header（常に一番上に佇む）
 =============================== */
 h1 {
-  font-size: 1.45rem;
+  font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.2em; 
@@ -181,7 +181,7 @@ body.has-result #guide,
   font-size: 1.45rem !important;   /* 🌟貧弱さを完全に消し去る大文字サイズ */
   font-weight: 500;
   letter-spacing: 0.16em;
-  margin-top: 0 !important;
+  margin-top: 24px !important;
   margin-bottom: 36px !important; /* 下のメッセージ本文との上品な隙間 */
 }
 
@@ -298,8 +298,17 @@ body.deepnight-playing .container {
 body.deepnight-playing h1 {
   display: none;
 }
+
+body.deepnight-playing #guide,
+body.deepnight-playing #tap-hint {
+  display: none !important;
+}
 /* ここをタップしてね↓をタップ後に消すために追加 */
 /* タップ後は「ここをタップしてね↓」を消す */
+.container.has-result #tap-hint {
+  display: none !important;
+}
+
 .container.has-result #tap-hint {
   display: none !important;
 }

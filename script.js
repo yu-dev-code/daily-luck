@@ -162,7 +162,7 @@ if (deepnightPlayBtn) {
 
   deepnightArea.style.display = "block";
   document.body.classList.add("deepnight-playing");
-
+  
 
   // 初回のみ：その日の動画を決定 一時動画確認のため差し替え　テスト後もどす
   if (!deepnightVideo.src) {
@@ -205,6 +205,7 @@ btn.addEventListener("click", async (e) => {
 
   // 深夜
   if (slot === "deepnight") {
+    btn.style.display = "none";
     await toggleDeepnightVideo();
     return;
   }
@@ -226,16 +227,12 @@ btn.addEventListener("click", async (e) => {
   showResult(pickMessage(slot));
   container.classList.add("has-result");
   localStorage.setItem(key, "1");
-  if (slot === "afternoon" || slot === "night") {
-  btn.classList.add("btn-ghost");
-} else {
   btn.style.display = "none";
-}
 
 
 });
 // ===== 開発用：時間帯を強制 =====
-const FORCE_SLOT = null; // "night" / "deepnight" / null最後に消す！！
+const FORCE_SLOT = "deepnight"; // "night" / "deepnight" / null最後に消す！！
 
 function getTimeSlotJST() {
   if (FORCE_SLOT) return FORCE_SLOT;  //最後に消す！！
